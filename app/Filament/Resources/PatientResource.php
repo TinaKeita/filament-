@@ -72,13 +72,7 @@ class PatientResource extends Resource
                 Tables\Columns\TextColumn::make('date_of_birth'),
                 Tables\Columns\TextColumn::make('owner.name')
                     ->searchable(),
-                
-                Tables\Columns\TextColumn::make('description'),
-                Tables\Columns\TextColumn::make('price')
-                    ->money('EUR')
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime(),
+            
             ])
             ->filters([
                 Tables\Filters\SelectFilter::make('type')
